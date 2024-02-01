@@ -16,7 +16,6 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <Navbar />
-
             <div className="product-grid">
                 {products.map((product) => (
                     <ProductCard key={product.id} productId={product.id} />

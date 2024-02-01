@@ -39,7 +39,7 @@ app.get("/products", async (req: Request, res: Response) => {
     try {
         const fetchedProducts = await fetchProducts();
         if (fetchedProducts) {
-            await saveProductsToDatabase(fetchedProducts); 
+            await saveProductsToDatabase(fetchedProducts);
 
             const allProducts = await getProductsFromDatabase();
             res.status(200).json({
